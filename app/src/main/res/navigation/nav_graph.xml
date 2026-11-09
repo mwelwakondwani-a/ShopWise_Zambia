@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <!-- LOGIN SCREEN -->
+    <fragment android:id="@+id/loginFragment" android:name="com.example.shopwise.ui.LoginFragment" android:label="Login">
+        <action android:id="@+id/action_login_to_dashboard" app:destination="@id/dashboardFragment" app:popUpTo="@id/loginFragment" app:popUpToInclusive="true"/>
+    </fragment>
+
+    <!-- DASHBOARD SCREEN -->
+    <fragment android:id="@+id/dashboardFragment" android:name="com.example.shopwise.ui.DashboardFragment" android:label="Home">
+        <action android:id="@+id/action_dashboard_to_addProduct" app:destination="@id/addProductFragment" />
+    </fragment>
+
+    <!-- EXISTING SCREENS -->
+    <fragment android:id="@+id/productListFragment" android:name="com.example.shopwise.ui.ProductListFragment" android:label="Products">
+        <action android:id="@+id/action_productList_to_addProduct" app:destination="@id/addProductFragment" />
+    </fragment>
+    <fragment android:id="@+id/addProductFragment" android:name="com.example.shopwise.ui.AddProductFragment" android:label="Add Product" />
+    <fragment android:id="@+id/recordSaleFragment" android:name="com.example.shopwise.ui.RecordSaleFragment" android:label="Sell" />
+    <fragment android:id="@+id/historyFragment" android:name="com.example.shopwise.ui.HistoryFragment" android:label="History" />
+
+    <!-- PROFILE SCREEN WITH LOGOUT ACTION -->
+    <fragment android:id="@+id/profileFragment" android:name="com.example.shopwise.ui.ProfileFragment" android:label="Profile">
+        <action android:id="@+id/action_profile_to_login" app:destination="@id/loginFragment" app:popUpTo="@id/nav_graph" app:popUpToInclusive="true"/>
+    </fragment>
+</navigation>

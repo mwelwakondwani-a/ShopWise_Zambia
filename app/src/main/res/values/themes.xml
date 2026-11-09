@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Changed DayNight to Light -->
+    <style name="Theme.ShopWise" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary_navy</item>
+        <item name="colorPrimaryVariant">@color/primary_navy_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/success_green</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="android:statusBarColor">@color/primary_navy_dark</item>
+        <item name="android:windowBackground">@color/bg_light_cool</item>
+    </style>
+</resources>
